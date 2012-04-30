@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Main-Class: in.ac.iitb.wiki.GraphGen
+Class-Path:  
+ ./in/ac/iitb/wiki/  
+ lib/collections-generic-4.01.jar  
+ lib/edu.mit.jwi_2.2.1.jar  
+ lib/ejml-0.18.jar 
+ lib/Jama-1.0.2.jar 
+ lib/jregex1.2_01.jar 
+ lib/JWPL_API_0.6.0.jar 
+ lib/JWPL_DATAMACHINE_0.6.0.jar 
+ lib/LBFGS.jar 
+ lib/lucene-core-3.1.0.jar 
+ lib/lucene-core-3.1.0-javadoc.jar 
+ lib/ojalgo-31.10.jar 
+ lib/smlrNew.jar 
+ lib/stanford-parser.jar 
+ lib/stanford-postagger-2012-01-06.jar 
+ lib/trove-3.0.0rc2.jar 
+ lib/QAssist.jar 
+  
