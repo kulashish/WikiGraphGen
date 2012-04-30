@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/QAssist"/>
+	<classpathentry kind="lib" path="/QAssist/lib/trove-3.0.0rc2.jar"/>
+	<classpathentry kind="lib" path="/QAssist/lib/collections-generic-4.01.jar"/>
+	<classpathentry kind="lib" path="/QAssist/lib/edu.mit.jwi_2.2.1.jar"/>
+	<classpathentry kind="lib" path="/QAssist/lib/ejml-0.18-doc.zip"/>
+	<classpathentry kind="lib" path="/QAssist/lib/ejml-0.18.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/home/ram/PhD-Work/Query-Interpretations/Code/workspace/QAssist/lib/ejml-0.18-doc.zip!/ejml-0.18-doc"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/QAssist/lib/Jama-1.0.2.jar"/>
+	<classpathentry kind="lib" path="/QAssist/lib/jregex1.2_01.jar"/>
+	<classpathentry kind="lib" path="/QAssist/lib/JWPL_API_0.6.0.jar"/>
+	<classpathentry kind="lib" path="/QAssist/lib/JWPL_DATAMACHINE_0.6.0.jar"/>
+	<classpathentry kind="lib" path="/QAssist/lib/LBFGS.jar"/>
+	<classpathentry kind="lib" path="/QAssist/lib/lucene-core-3.1.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="/QAssist/lib/lucene-core-3.1.0.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/QAssist/lib/lucene-core-3.1.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/QAssist/lib/ojalgo-31.10-doc.zip"/>
+	<classpathentry kind="lib" path="/QAssist/lib/ojalgo-31.10.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/QAssist/lib/ojalgo-31.10-doc.zip!/doc"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/QAssist/lib/smlrNew.jar"/>
+	<classpathentry kind="lib" path="/QAssist/lib/stanford-parser.jar"/>
+	<classpathentry kind="lib" path="/QAssist/lib/stanford-postagger-2012-01-06.jar"/>
+	<classpathentry kind="lib" path="/home/ashish/Documents/graphcode/jgrapht-0.8.3/lib/jgraph.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
