@@ -28,6 +28,7 @@ import com.aneedo.search.SemClassStore;
 import com.aneedo.search.SemanticIndexSearcher;
 import com.aneedo.search.bean.SemEntityBean;
 import com.aneedo.search.bean.SemInterpretation;
+import com.aneedo.search.util.SemanticSearchUtil;
 
 public class GraphGen {
 
@@ -108,6 +109,8 @@ public class GraphGen {
 			semClassIter = semClassMap.iterator();
 			String[] entityTitles = null;
 
+			String semClassName = SemanticSearchUtil.getInstance()
+					.getSemClassName(semClassIter.key());
 			while (semClassIter.hasNext()) {
 				semClassIter.advance();
 				for (String entity : semClassIter.value()) {
@@ -120,50 +123,5 @@ public class GraphGen {
 			}
 		}
 		return undirectedGraph;
-	}
-
-	private static void displayAllNodes(SemClassStore semclassStore) {
-		TIntObjectHashMap<SemEntityBean> semEntityBeanMap = semclassStore
-				.getSemEntityBeanMap();
-
-		TIntObjectIterator<SemEntityBean> iter = semEntityBeanMap.iterator();
-		SemEntityBean semEntityBean = null;
-		TIntObjectHashMap<List<String>> semClassMap = null;
-		TIntObjectIterator<List<String>> semClassIter = null;
-		while (iter.hasNext()) {
-			iter.advance();
-			semEntityBean = iter.value();
-			System.out.println("-------------------------");
-			System.out.println(semEntityBean.getTitle());
-			System.out.println("-------------------------");
-			semClassMap = semEntityBean.getWordSemClassMap();
-			semClassIter = semClassMap.iterator();
-			while (semClassIter.hasNext()) {
-				semClassIter.advance();
-				System.out.println();
-				System.out.print(semClassIter.key() + ": ");
-				for (String entity : semClassIter.value()) {
-					System.out.print(entity + ", ");
-				}
-			}
-		}
-	}
-
-	private static void displayInterpretations(SemClassStore store) {
-		List<SemInterpretation> semInterpretations = store
-				.getSemInterpretationList();
-
-		InterpretationSplitter splitter = null;
-		String[] entities = null;
-		for (SemInterpretation interpretation : semInterpretations) {
-			System.out.println(interpretation.getOverlapSemMembersDtls());
-			splitter = new InterpretationSplitter(
-					interpretation.getOverlapSemMembersDtls());
-			entities = splitter.getInterpretations();
-			for (String entity : entities)
-				System.out.print(store.getSemEntity(Integer.parseInt(entity))
-						.getTitle() + ", ");
-			System.out.println("(" + interpretation.getInterpretation() + ")");
-		}
 	}
 }
